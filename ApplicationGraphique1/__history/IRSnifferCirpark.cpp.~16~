@@ -1,0 +1,145 @@
+#include "IRSnifferCirpark.h"
+#include <fstream>
+#include <iomanip>
+#include <iostream>
+
+
+
+IRSnifferCirpark::IRSnifferCirpark()
+{   adresseIPServeurCirpark = "127.0.0.1";
+	portServeurCirpark = 10001;
+	memset(requete, 0, sizeof(requete));
+	memset(reponse, 0, sizeof(reponse));
+}
+
+bool IRSnifferCirpark::ParametrerLeServeurCirpark(std::string adresseIP, unsigned short port)
+{   adresseIPServeurCirpark = adresseIP;
+	portServeurCirpark = port;
+	bool ok = clientCirpark.OuvrirLaSocketDeCommunication(adresseIPServeurCirpark, portServeurCirpark);
+	return ok;
+}
+
+bool IRSnifferCirpark::DetecterUnCapteur(unsigned short adresseCapteur)
+{   return EnvoyerRequeteCapteur(adresseCapteur,0x05);
+}
+
+int IRSnifferCirpark::DetecterLesCapteurs(unsigned short adresseCapteurDepart, unsigned short adresseCapteurFin)
+{   nbCapteurs = 0;
+	memset(tabCapteurs, 0, sizeof(tabCapteurs));
+
+	for (unsigned short adr=adresseCapteurDepart; adr<adresseCapteurFin; adr++)
+	{
+		if(DetecterUnCapteur(adr) == true)
+		{
+			tabCapteurs[nbCapteurs++] = adr;
+		}
+	}
+	return nbCapteurs;
+}
+
+void IRSnifferCirpark::EnregistrerSous(std::string nomFichier){
+	std::ofstream Fichier;
+	Fichier.open(nomFichier);
+	for (int i = 0; i < nbCapteurs; i++) {
+		if(Fichier.is_open()) Fichier << std::uppercase << std::hex << std::setw(4) << std::setfill('0') << tabCapteurs[i] << std::endl;
+		else {std::cout<< "Erreur ouverture du fichier " << std::endl; break;}
+  }
+    Fichier.close();
+}
+bool IRSnifferCirpark::EnvoyerRequeteCapteur(unsigned short adresseCapteur,unsigned char codeFonction)
+{
+	unsigned char cle[2] = {0xA3, 0xC5};
+	requete[0] = (adresseCapteur&0xFF00)>>8;
+	requete[1] = adresseCapteur&0x00FF;
+	requete[2] = codeFonction;
+	requete[3] = requete[0] + requete[1] + requete[2];
+	// Envoi de la requete
+	for(int i = 0; i < 4 ; i++) requete[i] = requete[i] ^ cle[i%2];
+	clientCirpark.EnvoyerDesOctets(requete, 4);
+
+
+
+	int nbOctets = clientCirpark.RecevoirDesOctets(reponse,20);
+	for(int i = 0; i < 4 ; i++) reponse[i] = reponse[i] ^ cle[i%2];
+
+
+	if(nbOctets == 0) return false;
+	return true;
+}
+bool IRSnifferCirpark::EnvoyerDonneeCapteur(unsigned short adresseCapteur,unsigned char codeFonction,unsigned char donnee)
+{   requete[0] = (adresseCapteur&0xFF00)>>8;
+	requete[1] = adresseCapteur&0x00FF;
+	requete[2] = codeFonction;
+	requete[3] = donnee;
+	requete[4] = requete[0] + requete[1] + requete[2] + requete[3];
+	// Envoi de la requete
+	clientCirpark.EnvoyerDesOctets(requete, 5);
+	int nbOctets = clientCirpark.RecevoirDesOctets(reponse,20);
+	if(nbOctets == 0) return false;
+	return true;
+}
+void IRSnifferCirpark::LireConfigurationCapteur(unsigned short adresseCapteur)
+{   char codesFonctions[20]={0x03,0x42,0x07,0x05,0x04,0x06,0x10,0x85};
+	int nbCodesFonctions=8;
+	for(int i=0;i<8;i++)
+	{	EnvoyerRequeteCapteur(adresseCapteur,codesFonctions[i]);
+		DecoderReponse(codesFonctions[i]);
+	}
+}
+void IRSnifferCirpark::DecoderReponse(unsigned char codeF)
+{   switch (codeF)
+	{	case 0x03:
+			if(reponse[2]==0) mode="Rx"; else mode="Rx/Tx";
+			break;
+		case 0x42:
+			if(reponse[2]==0xfa) bril="Maximum";
+			else if(reponse[2]==0x0a) bril="Minimum";
+			break;
+		case 0x07:
+			if(reponse[2]==0) mddt="D�tection du sol"; else mddt="Pas de d�tection du sol";
+			break;
+		case 0x04:
+			pote=(int)reponse[2]&0xff;
+			break;
+		case 0x06:
+			if(reponse[2]==0x08) {dist="De 150 � 159 cm";      intDist=155;}
+			if(reponse[2]==0x09) {dist="De 160 � 179 cm";      intDist=170;}
+			if(reponse[2]==0x0A) {dist="De 180 � 189 cm";      intDist=185;}
+			if(reponse[2]==0x0B) {dist="De 190 � 209 cm";      intDist=200;}
+			if(reponse[2]==0x0C) {dist="De 210 � 229 cm";      intDist=220;}
+			if(reponse[2]==0x0D) {dist="De 230 � 249 cm";      intDist=240;}
+			if(reponse[2]==0x0E) {dist="De 250 � 269 cm";      intDist=260;}
+			if(reponse[2]==0x0F) {dist="De 270 � 279 cm";      intDist=275;}
+			if(reponse[2]==0x10) {dist="De 280 � 299 cm";      intDist=290;}
+			if(reponse[2]==0x11) {dist="De 300 � 319 cm";      intDist=310;}
+			if(reponse[2]==0x12) {dist="De 320 � 339 cm";      intDist=330;}
+			if(reponse[2]==0x13) {dist="De 340 � 359 cm";      intDist=350;}
+			if(reponse[2]==0x14) {dist="De 360 � 379 cm";      intDist=370;}
+			if(reponse[2]==0x15) {dist="De 380 � 399 cm";      intDist=390;}
+			if(reponse[2]==0x16) {dist="Au dessus de 400 cm";  intDist=400;}
+			break;
+		case 0x05:
+			if(reponse[2]==0x02) type="SP1";
+			if(reponse[2]==0x1D) type="SP2";
+			if(reponse[2]==0x2B) type="SP3";
+			vers=(int)(reponse[3]&0xff)-10;
+			break;
+		case 0x10:
+			if(reponse[2]==0)
+			{	txtEtat="Libre";  etat=0;
+			}
+			else
+			{	txtEtat="Occup�e";   etat=1;
+			}
+			break;
+		case 0x85:
+			c_ok=(int)reponse[2]&0xff;
+			cnok=(int)reponse[3]&0xff;
+			cout=(int)reponse[4]&0xff;
+			inp=(int)reponse[5]&0xff;
+			break;
+	}
+}
+
+
+

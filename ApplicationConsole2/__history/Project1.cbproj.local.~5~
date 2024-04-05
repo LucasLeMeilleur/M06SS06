@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/03/26 10:38:49.000.160,=C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\Unit1.cpp</Transaction>
+    <Transaction>2024/03/26 10:38:49.000.129,=C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\Project1PCH1.h</Transaction>
+    <Transaction>2024/03/28 08:25:31.000.581,=C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\File2.cpp</Transaction>
+    <Transaction>2024/03/28 08:25:31.000.573,=C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\Project1PCH1.h</Transaction>
+    <Transaction>2024/03/28 08:25:47.000.256,C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\File2.cpp=C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\File2.cpp</Transaction>
+    <Transaction>2024/03/28 08:25:47.000.982,C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\Project1PCH1.h=C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\Project1PCH1.h</Transaction>
+    <Transaction>2024/03/28 08:25:48.000.590,C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\Project1.cbproj=C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\Project1.cbproj</Transaction>
+    <Transaction>2024/03/28 08:25:54.000.672,C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\File2.cpp=C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\main.cpp</Transaction>
+    <Transaction>2024/03/28 08:26:23.000.298,=C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\IRClientUDP.h</Transaction>
+    <Transaction>2024/03/28 08:26:23.000.303,=C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\IRSnifferCirpark.h</Transaction>
+    <Transaction>2024/03/28 08:26:23.000.314,=C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\IRClientUDP.cpp</Transaction>
+    <Transaction>2024/03/28 08:26:54.000.710,=C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\Unit1.cpp</Transaction>
+    <Transaction>2024/03/28 08:27:05.000.341,C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\Unit1.h=C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\IRSnifferCirpak.h</Transaction>
+    <Transaction>2024/03/28 08:27:05.000.341,C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\Unit1.cpp=C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\IRSnifferCirpak.cpp</Transaction>
+    <Transaction>2024/03/28 08:27:09.000.573,C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\IRSnifferCirpark.h=</Transaction>
+    <Transaction>2024/03/28 08:27:13.000.014,C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\IRSnifferCirpak.h=C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\IRSnifferCirpark.h</Transaction>
+    <Transaction>2024/03/28 08:27:13.000.014,C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\IRSnifferCirpak.cpp=C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\IRSnifferCirpark.cpp</Transaction>
+    <Transaction>2024/03/28 08:48:17.000.896,C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\IRClientUDP.cpp=</Transaction>
+    <Transaction>2024/03/28 08:48:23.000.987,C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\IRClientUDP.h=</Transaction>
+    <Transaction>2024/03/28 08:48:33.000.629,=C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\IRClientUDP.cpp</Transaction>
+    <Transaction>2024/03/29 14:02:05.000.140,=C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\IRClientUDP.h</Transaction>
+    <Transaction>2024/03/29 14:13:27.000.539,=C:\Users\lpokrywa\Desktop\M06\ApllicationConsole2\IRSnifferCirpark.h</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="IRClientUDP.cpp"/>
+    <File Path="IRClientUDP.h"/>
+    <File Path="main.cpp"/>
+    <File Path="Project1PCH1.h"/>
+    <File Path="IRSnifferCirpark.cpp"/>
+    <File Path="IRSnifferCirpark.h"/>
+  </ProjectSortOrder>
+</BorlandProject>

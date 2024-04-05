@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/03/26 10:38:49.000.160,=C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\Unit1.cpp</Transaction>
+    <Transaction>2024/03/26 10:38:49.000.129,=C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\Project1PCH1.h</Transaction>
+    <Transaction>2024/03/26 10:39:00.000.565,=C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\File2.cpp</Transaction>
+    <Transaction>2024/03/26 10:39:00.000.557,=C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\Project1PCH1.h</Transaction>
+    <Transaction>2024/03/26 10:44:42.000.652,C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\File2.cpp=C:\Users\lpokrywa\Desktop\M06\ApplicationConsole\File2.cpp</Transaction>
+    <Transaction>2024/03/26 10:44:43.000.529,C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\Project1PCH1.h=C:\Users\lpokrywa\Desktop\M06\ApplicationConsole\Project1PCH1.h</Transaction>
+    <Transaction>2024/03/26 10:44:44.000.200,C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\Project1.cbproj=C:\Users\lpokrywa\Desktop\M06\ApplicationConsole\Project1.cbproj</Transaction>
+    <Transaction>2024/03/28 08:03:43.954,=C:\Users\lpokrywa\Desktop\M06\ApplicationConsole\IRClientTCP.cpp</Transaction>
+    <Transaction>2024/03/28 08:03:43.960,=C:\Users\lpokrywa\Desktop\M06\ApplicationConsole\IRClientTCP.h</Transaction>
+    <Transaction>2024/03/28 08:03:43.966,=C:\Users\lpokrywa\Desktop\M06\ApplicationConsole\main.cpp</Transaction>
+    <Transaction>2024/03/28 08:18:08.728,=C:\Users\lpokrywa\Desktop\M06\ApplicationConsole\IRSnifferCirpark.h</Transaction>
+  </Transactions>
+</BorlandProject>

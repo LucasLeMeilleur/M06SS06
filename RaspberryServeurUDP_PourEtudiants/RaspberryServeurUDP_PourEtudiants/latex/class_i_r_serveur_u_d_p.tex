@@ -1,0 +1,153 @@
+\doxysection{IRServeur\+UDP Class Reference}
+\hypertarget{class_i_r_serveur_u_d_p}{}\label{class_i_r_serveur_u_d_p}\index{IRServeurUDP@{IRServeurUDP}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_i_r_serveur_u_d_p_ab44a766aa782b8592bd6e95f45823a6e}{Ouvrir\+La\+Socket\+DEcoute}} (unsigned short port\+DEcoute, std\+::string adresse\+IPDEcoute="{}0.\+0.\+0.\+0"{})
+\begin{DoxyCompactList}\small\item\em Méthode permettant d\textquotesingle{}ouvrir la socket serveur UDP et l\textquotesingle{}attacher à une adresse IP et un port. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_i_r_serveur_u_d_p_a9a50963f1b32a58fcd65422695d4506e}{Envoyer\+Un\+Message}} (std\+::string message)
+\begin{DoxyCompactList}\small\item\em Méthode permettant d\textquotesingle{}envoyer un message au serveur UDP. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_i_r_serveur_u_d_p_a2779f77a0b6ea8b72bf37bb71eb7ac85}{Envoyer\+Des\+Octets}} (const unsigned char \texorpdfstring{$\ast$}{*}tableau, int taille)
+\begin{DoxyCompactList}\small\item\em Méthode permettant d\textquotesingle{}envoyer un tableau d\textquotesingle{}octets au serveur UDP. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_i_r_serveur_u_d_p_a129045523e349d1252cd1d655d487bd6}{Recevoir\+Un\+Message}} (std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Méthode permettant de recevoir un message provenant du serveur UDP. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_i_r_serveur_u_d_p_a1cef074853bc83af5494eec8e2f739e9}{Recevoir\+Des\+Octets}} (unsigned char \texorpdfstring{$\ast$}{*}tableau, int taille\+Max)
+\begin{DoxyCompactList}\small\item\em Méthode permettant de recevoir un tableau d\textquotesingle{}octets provenant du serveur UDP. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_i_r_serveur_u_d_p_a25bf8eb5116d3bc639de89736bcfa29a}{Fermer\+La\+Socket}} ()
+\begin{DoxyCompactList}\small\item\em Méthode permettant de fermer la socket cliente UDP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_r_serveur_u_d_p_a2779f77a0b6ea8b72bf37bb71eb7ac85}\label{class_i_r_serveur_u_d_p_a2779f77a0b6ea8b72bf37bb71eb7ac85} 
+\index{IRServeurUDP@{IRServeurUDP}!EnvoyerDesOctets@{EnvoyerDesOctets}}
+\index{EnvoyerDesOctets@{EnvoyerDesOctets}!IRServeurUDP@{IRServeurUDP}}
+\doxysubsubsection{\texorpdfstring{EnvoyerDesOctets()}{EnvoyerDesOctets()}}
+{\footnotesize\ttfamily bool IRServeur\+UDP\+::\+Envoyer\+Des\+Octets (\begin{DoxyParamCaption}\item[{const unsigned char \texorpdfstring{$\ast$}{*}}]{tableau,  }\item[{int}]{taille }\end{DoxyParamCaption})}
+
+
+
+Méthode permettant d\textquotesingle{}envoyer un tableau d\textquotesingle{}octets au serveur UDP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & le tableau d\textquotesingle{}octets à envoyer \\
+\hline
+{\em taille} & la taille du tableau d\textquotesingle{}octets à envoyer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cette méthode renvoie true si le message a été correctement émis, false sinon. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_i_r_serveur_u_d_p_a9a50963f1b32a58fcd65422695d4506e}{Envoyer\+Un\+Message(std\+::string message)} 
+\end{DoxySeeAlso}
+\Hypertarget{class_i_r_serveur_u_d_p_a9a50963f1b32a58fcd65422695d4506e}\label{class_i_r_serveur_u_d_p_a9a50963f1b32a58fcd65422695d4506e} 
+\index{IRServeurUDP@{IRServeurUDP}!EnvoyerUnMessage@{EnvoyerUnMessage}}
+\index{EnvoyerUnMessage@{EnvoyerUnMessage}!IRServeurUDP@{IRServeurUDP}}
+\doxysubsubsection{\texorpdfstring{EnvoyerUnMessage()}{EnvoyerUnMessage()}}
+{\footnotesize\ttfamily bool IRServeur\+UDP\+::\+Envoyer\+Un\+Message (\begin{DoxyParamCaption}\item[{std\+::string}]{message }\end{DoxyParamCaption})}
+
+
+
+Méthode permettant d\textquotesingle{}envoyer un message au serveur UDP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & le message à envoyer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cette méthode renvoie true si le message a été correctement émis, false sinon. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Envoyer\+Des\+Octets(const char \texorpdfstring{$\ast$}{*} tableau, int taille) 
+\end{DoxySeeAlso}
+\Hypertarget{class_i_r_serveur_u_d_p_a25bf8eb5116d3bc639de89736bcfa29a}\label{class_i_r_serveur_u_d_p_a25bf8eb5116d3bc639de89736bcfa29a} 
+\index{IRServeurUDP@{IRServeurUDP}!FermerLaSocket@{FermerLaSocket}}
+\index{FermerLaSocket@{FermerLaSocket}!IRServeurUDP@{IRServeurUDP}}
+\doxysubsubsection{\texorpdfstring{FermerLaSocket()}{FermerLaSocket()}}
+{\footnotesize\ttfamily bool IRServeur\+UDP\+::\+Fermer\+La\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Méthode permettant de fermer la socket cliente UDP. 
+
+\begin{DoxyReturn}{Returns}
+Cette méthode renvoie true si la socket de communication est bien fermée, false sinon. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Ouvrir\+La\+Socket(std\+::string adresse\+IPServeur, unsigned short port\+Serveur) 
+\end{DoxySeeAlso}
+\Hypertarget{class_i_r_serveur_u_d_p_ab44a766aa782b8592bd6e95f45823a6e}\label{class_i_r_serveur_u_d_p_ab44a766aa782b8592bd6e95f45823a6e} 
+\index{IRServeurUDP@{IRServeurUDP}!OuvrirLaSocketDEcoute@{OuvrirLaSocketDEcoute}}
+\index{OuvrirLaSocketDEcoute@{OuvrirLaSocketDEcoute}!IRServeurUDP@{IRServeurUDP}}
+\doxysubsubsection{\texorpdfstring{OuvrirLaSocketDEcoute()}{OuvrirLaSocketDEcoute()}}
+{\footnotesize\ttfamily bool IRServeur\+UDP\+::\+Ouvrir\+La\+Socket\+DEcoute (\begin{DoxyParamCaption}\item[{unsigned short}]{port\+DEcoute,  }\item[{std\+::string}]{adresse\+IPDEcoute = {\ttfamily "{}0.0.0.0"{}} }\end{DoxyParamCaption})}
+
+
+
+Méthode permettant d\textquotesingle{}ouvrir la socket serveur UDP et l\textquotesingle{}attacher à une adresse IP et un port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adresse\+IPDEcoute} & l\textquotesingle{}adresse IP du serveur UDP, 0.\+0.\+0.\+0 pour écouter sur toutes les interfaces réseaux disponibles \\
+\hline
+{\em port\+DEcoute} & le port d\textquotesingle{}écoute du serveur UDP \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cette méthode renvoie true si la socket serveur est bien ouverte, false sinon. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_i_r_serveur_u_d_p_a25bf8eb5116d3bc639de89736bcfa29a}{Fermer\+La\+Socket()} 
+\end{DoxySeeAlso}
+\Hypertarget{class_i_r_serveur_u_d_p_a1cef074853bc83af5494eec8e2f739e9}\label{class_i_r_serveur_u_d_p_a1cef074853bc83af5494eec8e2f739e9} 
+\index{IRServeurUDP@{IRServeurUDP}!RecevoirDesOctets@{RecevoirDesOctets}}
+\index{RecevoirDesOctets@{RecevoirDesOctets}!IRServeurUDP@{IRServeurUDP}}
+\doxysubsubsection{\texorpdfstring{RecevoirDesOctets()}{RecevoirDesOctets()}}
+{\footnotesize\ttfamily int IRServeur\+UDP\+::\+Recevoir\+Des\+Octets (\begin{DoxyParamCaption}\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{tableau,  }\item[{int}]{taille\+Max }\end{DoxyParamCaption})}
+
+
+
+Méthode permettant de recevoir un tableau d\textquotesingle{}octets provenant du serveur UDP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tableau} & le tableau d\textquotesingle{}octet qui contiendra les données à recevoir \\
+\hline
+{\em taille\+Max} & le nombre d\textquotesingle{}octets maximum que peut contenir le tableau d\textquotesingle{}octet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cette méthode renvoie le nombre d\textquotesingle{}octets reçus. En cas d\textquotesingle{}échec, cette méthode renvoie 0 ou une valeur négative. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Recevoir\+Des\+Octets(char \texorpdfstring{$\ast$}{*} tableau, int taille\+Max) 
+\end{DoxySeeAlso}
+\Hypertarget{class_i_r_serveur_u_d_p_a129045523e349d1252cd1d655d487bd6}\label{class_i_r_serveur_u_d_p_a129045523e349d1252cd1d655d487bd6} 
+\index{IRServeurUDP@{IRServeurUDP}!RecevoirUnMessage@{RecevoirUnMessage}}
+\index{RecevoirUnMessage@{RecevoirUnMessage}!IRServeurUDP@{IRServeurUDP}}
+\doxysubsubsection{\texorpdfstring{RecevoirUnMessage()}{RecevoirUnMessage()}}
+{\footnotesize\ttfamily int IRServeur\+UDP\+::\+Recevoir\+Un\+Message (\begin{DoxyParamCaption}\item[{std\+::string \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Méthode permettant de recevoir un message provenant du serveur UDP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & une référence au message qui contiendra le message à recevoir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cette méthode renvoie le nombre d\textquotesingle{}octets reçus. En cas d\textquotesingle{}échec, cette méthode renvoie 0 ou une valeur négative. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Recevoir\+Des\+Octets(char \texorpdfstring{$\ast$}{*} tableau, int taille\+Max) 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+IRServeur\+UDP.\+h\item 
+IRServeur\+UDP.\+cpp\end{DoxyCompactItemize}

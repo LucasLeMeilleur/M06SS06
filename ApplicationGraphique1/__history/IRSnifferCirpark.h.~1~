@@ -1,0 +1,49 @@
+#ifndef IRSNIFFERCIRPARK_H
+#define IRSNIFFERIRPARK_H
+
+#include <string>
+#include "IRClientUDP.h"
+
+class IRSnifferCirpark 
+{
+    private :
+        std::string adresseIPServeurCirpark;
+        unsigned short portServeurCirpark;
+        IRClientUDP clientCirpark;
+        unsigned char requete[10];
+		unsigned char reponse[20];
+        unsigned short tabCapteurs[100];
+        int nbCapteurs;
+		std::string mode,bril,mddt,dist,type,txtEtat;
+		bool etat;
+		int pote,intDist,vers,c_ok,cnok,cout,inp;
+	public :
+        IRSnifferCirpark();
+		bool ParametrerLeServeurCirpark(std:: string adresseIP, unsigned short port);
+		bool DetecterUnCapteur(unsigned short adresseCapteur);
+		int DetecterLesCapteurs(unsigned short adresseCapteurDepart, unsigned short adresseCapteurFin);
+		inline int NombreCapteursTrouves() {return nbCapteurs;};
+		inline unsigned short CapteurTrouve(int num) {if(num<nbCapteurs) return tabCapteurs[num]; else return 0;};
+		void EnregistrerSous(std::string nomFichier);
+		bool EnvoyerRequeteCapteur(unsigned short adresseCapteur,unsigned char codeFonction);
+		bool EnvoyerDonneeCapteur(unsigned short adresseCapteur,unsigned char codeFonction,unsigned char donnee);
+		void LireConfigurationCapteur(unsigned short adresseCapteur);
+		inline std::string Mode(){return mode;};
+		inline std::string Bril(){return bril;};
+		inline std::string Mddt(){return mddt;};
+		inline int Pote(){return pote;};
+		inline std::string Dist(){return dist;};
+		inline int IntDist(){return intDist;};
+		inline std::string Type(){return type;};
+		inline std::string TxtEtat(){return txtEtat;};
+		inline bool Etat(){return etat;};
+		inline int Vers(){return vers;};
+		inline int C_ok(){return c_ok;};
+		inline int Cnok(){return cnok;};
+		inline int Cout(){return cout;};
+		inline int Inp(){return inp;};
+    	void DecoderReponse(unsigned char codeF);
+		unsigned char* Reponse(){return reponse;};
+};
+
+#endif

@@ -1,0 +1,5 @@
+172.20.21.26
+80
+/services/user/devices.xml
+/services/user/deviceInfo.xml?id=SP%200A83
+/services/user/values.xml?var=SP%200A83.STATE

@@ -1,0 +1,3 @@
+NBETAGES	4
+NBPLACES	28	18	28	10
+ALEACAPTEURS	1	//génération du fichier vectorCapteurs.vec

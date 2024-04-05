@@ -1,0 +1,17 @@
+#include <string>
+
+class IRClientTCP{
+
+	private:
+	int nbClient;
+	int m_maSocket;
+	unsigned short m_portServeur;
+
+	public:
+	bool SeConnecterAUnServeur(std::string addresseIPServeur, unsigned short portServeur);
+	bool SeDeconnecter();
+	bool Envoyer(const char * requete, int longueur);
+	int Recevoir(char * reponse, int tailleMax);
+
+};
+

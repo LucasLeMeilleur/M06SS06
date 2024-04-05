@@ -1,0 +1,45 @@
+\doxysection{IRServeur\+UDP.\+h}
+\hypertarget{_i_r_serveur_u_d_p_8h_source}{}\label{_i_r_serveur_u_d_p_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ IRSERVEURUDP\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ IRSERVEURUDP\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifdef\ \_\_unix\_\_}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <arpa/inet.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#elif\ \_WIN32\ ||\ \_WIN64}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <winsock2.h>}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\#pragma\ comment(lib,\ "{}Ws2\_32.dll"{})}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_r_serveur_u_d_p}{IRServeurUDP}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ private\ :}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ std::string\ m\_adresseIPDEcoute;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ m\_portDEcoute;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ m\_socketServeurUDP;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ m\_nbServeurUDP;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }sockaddr\_in\ m\_addrServeur;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }sockaddr\_in\ from;\ \textcolor{comment}{//\ Le\ client}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ public\ :}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i_r_serveur_u_d_p}{IRServeurUDP}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i_r_serveur_u_d_p}{\string~IRServeurUDP}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_i_r_serveur_u_d_p_ab44a766aa782b8592bd6e95f45823a6e}{OuvrirLaSocketDEcoute}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ portDEcoute,\ std::string\ adresseIPDEcoute\ =\ \textcolor{stringliteral}{"{}0.0.0.0"{}});}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_i_r_serveur_u_d_p_a9a50963f1b32a58fcd65422695d4506e}{EnvoyerUnMessage}}(std::string\ message);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_i_r_serveur_u_d_p_a2779f77a0b6ea8b72bf37bb71eb7ac85}{EnvoyerDesOctets}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *\ tableau,\ \textcolor{keywordtype}{int}\ taille);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_i_r_serveur_u_d_p_a129045523e349d1252cd1d655d487bd6}{RecevoirUnMessage}}(std::string\ \&\ message);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_i_r_serveur_u_d_p_a1cef074853bc83af5494eec8e2f739e9}{RecevoirDesOctets}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *\ tableau,\ \textcolor{keywordtype}{int}\ tailleMax);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_i_r_serveur_u_d_p_a25bf8eb5116d3bc639de89736bcfa29a}{FermerLaSocket}}();}
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

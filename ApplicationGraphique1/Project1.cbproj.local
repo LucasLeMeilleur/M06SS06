@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/03/26 10:38:49.000.160,=C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\Unit1.cpp</Transaction>
+    <Transaction>2024/03/26 10:38:49.000.129,=C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\Project1PCH1.h</Transaction>
+    <Transaction>2024/04/03 17:17:42.000.363,=C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\Unit1.cpp</Transaction>
+    <Transaction>2024/04/03 17:17:42.000.326,=C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\Project1PCH1.h</Transaction>
+    <Transaction>2024/04/03 17:17:54.000.279,C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\Unit1.dfm=C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\Unit1.dfm</Transaction>
+    <Transaction>2024/04/03 17:17:54.000.279,C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\Unit1.cpp=C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\Unit1.cpp</Transaction>
+    <Transaction>2024/04/03 17:17:54.000.279,C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\Unit1.h=C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\Unit1.h</Transaction>
+    <Transaction>2024/04/03 17:17:55.000.807,C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\Project1.cbproj=C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\Project1.cbproj</Transaction>
+    <Transaction>2024/04/03 17:17:55.000.096,C:\Users\lpokrywa\Documents\Embarcadero\Studio\Projets\Project1PCH1.h=C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\Project1PCH1.h</Transaction>
+    <Transaction>2024/04/03 17:18:32.000.560,=C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\IRClientUDP.h</Transaction>
+    <Transaction>2024/04/03 17:18:32.000.579,=C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\IRSnifferCirpark.h</Transaction>
+    <Transaction>2024/04/03 17:18:32.000.556,=C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\IRClientUDP.cpp</Transaction>
+    <Transaction>2024/04/03 17:18:32.000.577,=C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\IRSnifferCirpark.cpp</Transaction>
+    <Transaction>2024/04/04 08:25:17.000.951,C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\IRSnifferCirpark.h=</Transaction>
+    <Transaction>2024/04/04 08:41:56.000.772,=C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\IRSnifferCirpark.h</Transaction>
+    <Transaction>2024/04/04 11:11:52.000.385,=C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\Unit2.cpp</Transaction>
+    <Transaction>2024/04/05 14:03:56.766,=C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\Unit3.cpp</Transaction>
+    <Transaction>2024/04/05 14:18:18.561,=C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\Unit4.cpp</Transaction>
+    <Transaction>2024/04/05 14:18:34.230,C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\Thread.cpp=C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\Unit4.cpp</Transaction>
+    <Transaction>2024/04/05 14:18:34.230,C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\Thread.h=C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\Unit4.h</Transaction>
+    <Transaction>2024/04/05 14:23:10.172,C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\Thread.cpp=</Transaction>
+    <Transaction>2024/04/05 14:24:13.941,C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\ThreadClass.h=C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\Unit2.h</Transaction>
+    <Transaction>2024/04/05 14:24:13.941,C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\ThreadClass.cpp=C:\Users\lpokrywa\Desktop\M06\ApplicationGraphique1\Unit2.cpp</Transaction>
+  </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="IRClientUDP.cpp"/>
+    <File Path="IRClientUDP.h"/>
+    <File Path="IRSnifferCirpark.cpp"/>
+    <File Path="IRSnifferCirpark.h"/>
+    <File Path="Project1.cpp"/>
+    <File Path="Project1PCH1.h"/>
+    <File Path="ThreadClass.cpp"/>
+    <File Path="ThreadClass.cpp"/>
+    <File Path="ThreadClass.h"/>
+    <File Path="Unit1.cpp"/>
+    <File Path="Unit1.cpp"/>
+    <File Path="Unit1.dfm"/>
+    <File Path="Unit1.h"/>
+    <File Path="Unit3.cpp"/>
+    <File Path="Unit3.cpp"/>
+    <File Path="Unit3.dfm"/>
+    <File Path="Unit3.h"/>
+  </ProjectSortOrder>
+</BorlandProject>

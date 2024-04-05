@@ -1,0 +1,317 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = ' '
+  ClientHeight = 606
+  ClientWidth = 725
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object LabelCapt: TLabel
+    Left = 603
+    Top = 24
+    Width = 96
+    Height = 13
+    Caption = '0 capteurs detect'#233's'
+  end
+  object Label1: TLabel
+    Left = 415
+    Top = 24
+    Width = 12
+    Height = 13
+    Caption = '->'
+  end
+  object Bevel1: TBevel
+    Left = 374
+    Top = 136
+    Width = 309
+    Height = 313
+  end
+  object Shape1: TShape
+    Left = 16
+    Top = 127
+    Width = 289
+    Height = 321
+    Shape = stCircle
+  end
+  object Shape2: TShape
+    Left = 72
+    Top = 191
+    Width = 177
+    Height = 185
+    Shape = stCircle
+  end
+  object Label2: TLabel
+    Left = 421
+    Top = 168
+    Width = 54
+    Height = 13
+    Caption = 'Mode RxTx'
+  end
+  object Label5: TLabel
+    Left = 421
+    Top = 263
+    Width = 24
+    Height = 13
+    Caption = 'Type'
+  end
+  object Label6: TLabel
+    Left = 421
+    Top = 244
+    Width = 41
+    Height = 13
+    Caption = 'Distance'
+  end
+  object Label7: TLabel
+    Left = 421
+    Top = 282
+    Width = 35
+    Height = 13
+    Caption = 'Version'
+  end
+  object Label8: TLabel
+    Left = 421
+    Top = 301
+    Width = 20
+    Height = 13
+    Caption = 'Etat'
+  end
+  object Label9: TLabel
+    Left = 421
+    Top = 225
+    Width = 68
+    Height = 13
+    Caption = 'Potentiom'#232'tre'
+  end
+  object Label10: TLabel
+    Left = 421
+    Top = 187
+    Width = 39
+    Height = 13
+    Caption = 'Brillance'
+  end
+  object Label11: TLabel
+    Left = 421
+    Top = 206
+    Width = 89
+    Height = 13
+    Caption = 'Mode de d'#233'tection'
+  end
+  object Label3: TLabel
+    Left = 421
+    Top = 382
+    Width = 60
+    Height = 13
+    Caption = 'Entr'#233'e pulse'
+  end
+  object Label4: TLabel
+    Left = 421
+    Top = 363
+    Width = 60
+    Height = 13
+    Caption = 'Nb pulse out'
+  end
+  object Label12: TLabel
+    Left = 421
+    Top = 344
+    Width = 61
+    Height = 13
+    Caption = 'Nb pulse nok'
+  end
+  object Label13: TLabel
+    Left = 421
+    Top = 320
+    Width = 55
+    Height = 13
+    Caption = 'Nb Pulse ok'
+  end
+  object Label14: TLabel
+    Left = 589
+    Top = 168
+    Width = 39
+    Height = 13
+    Caption = 'Brillance'
+  end
+  object Label15: TLabel
+    Left = 589
+    Top = 187
+    Width = 39
+    Height = 13
+    Caption = 'Brillance'
+  end
+  object Label16: TLabel
+    Left = 589
+    Top = 206
+    Width = 39
+    Height = 13
+    Caption = 'Brillance'
+  end
+  object Label17: TLabel
+    Left = 589
+    Top = 225
+    Width = 39
+    Height = 13
+    Caption = 'Brillance'
+  end
+  object Label18: TLabel
+    Left = 589
+    Top = 244
+    Width = 39
+    Height = 13
+    Caption = 'Brillance'
+  end
+  object Label19: TLabel
+    Left = 589
+    Top = 263
+    Width = 39
+    Height = 13
+    Caption = 'Brillance'
+  end
+  object Label20: TLabel
+    Left = 589
+    Top = 282
+    Width = 39
+    Height = 13
+    Caption = 'Brillance'
+  end
+  object Label21: TLabel
+    Left = 589
+    Top = 301
+    Width = 39
+    Height = 13
+    Caption = 'Brillance'
+  end
+  object Label22: TLabel
+    Left = 589
+    Top = 320
+    Width = 39
+    Height = 13
+    Caption = 'Brillance'
+  end
+  object Label23: TLabel
+    Left = 589
+    Top = 344
+    Width = 39
+    Height = 13
+    Caption = 'Brillance'
+  end
+  object Label24: TLabel
+    Left = 589
+    Top = 363
+    Width = 39
+    Height = 13
+    Caption = 'Brillance'
+  end
+  object Label25: TLabel
+    Left = 589
+    Top = 382
+    Width = 39
+    Height = 13
+    Caption = 'Brillance'
+  end
+  object Label26: TLabel
+    Left = 136
+    Top = 480
+    Width = 41
+    Height = 13
+    Caption = 'Distance'
+  end
+  object SpeedButton1: TSpeedButton
+    Left = 338
+    Top = 472
+    Width = 107
+    Height = 105
+  end
+  object SpeedButton2: TSpeedButton
+    Left = 466
+    Top = 472
+    Width = 107
+    Height = 105
+  end
+  object SpeedButton3: TSpeedButton
+    Left = 592
+    Top = 472
+    Width = 107
+    Height = 105
+  end
+  object InputIp: TEdit
+    Left = 32
+    Top = 21
+    Width = 105
+    Height = 21
+    TabOrder = 0
+    Text = '172.20.21.157'
+  end
+  object BoutonRech: TButton
+    Left = 150
+    Top = 19
+    Width = 75
+    Height = 25
+    Caption = 'Rechercher'
+    TabOrder = 1
+    OnClick = BoutonRechClick
+  end
+  object ComboCapteur: TComboBox
+    Left = 32
+    Top = 64
+    Width = 193
+    Height = 21
+    TabOrder = 2
+    Text = 'Liste Capteurs'
+  end
+  object EditPlageMin: TEdit
+    Left = 353
+    Top = 21
+    Width = 56
+    Height = 21
+    TabOrder = 3
+    Text = '1C0C'
+  end
+  object EditPlageMax: TEdit
+    Left = 433
+    Top = 21
+    Width = 57
+    Height = 21
+    TabOrder = 4
+    Text = '1C28'
+  end
+  object BoutonConfig: TButton
+    Left = 231
+    Top = 62
+    Width = 90
+    Height = 25
+    Caption = 'Configuration'
+    TabOrder = 5
+    OnClick = BoutonConfigClick
+  end
+  object TrackBar1: TTrackBar
+    Left = 8
+    Top = 516
+    Width = 289
+    Height = 45
+    Max = 400
+    TabOrder = 6
+    OnChange = TrackBar1Change
+  end
+  object Button1: TButton
+    Left = 520
+    Top = 62
+    Width = 137
+    Height = 25
+    Caption = 'Vue parking'
+    TabOrder = 7
+    OnClick = Button1Click
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    Left = 696
+    Top = 576
+  end
+end
